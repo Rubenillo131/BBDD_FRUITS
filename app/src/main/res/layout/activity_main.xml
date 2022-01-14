@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Relative"
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Space
+            android:id="@+id/space1"
+            android:layout_width="335dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft" />
+
+        <Space
+            android:id="@+id/spaceleft"
+            android:layout_width="36dp"
+            android:layout_height="match_parent" />
+
+        <Space
+            android:id="@+id/spaceright"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/txtform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space1"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft"
+            android:text="Form fruit:"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtfsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space2"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft"
+            android:text="Search fruit:"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etxt_delete"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtform"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft"
+            android:contentDescription="Name"
+            android:ems="10"
+            android:hint="Name..."
+            android:inputType="textPersonName"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/etxt_weight"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etxt_delete"
+            android:layout_toRightOf="@id/spaceleft"
+            android:contentDescription="Weight"
+            android:ems="10"
+            android:hint="Weight..."
+            android:inputType="number"
+            android:textAllCaps="true" />
+
+        <Spinner
+            android:id="@+id/combobox"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_below="@id/etxt_delete"
+            android:layout_toRightOf="@id/etxt_weight"
+            android:entries="@array/spinner_values" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etxt_delete"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/combobox"
+            android:text="Rotten"
+            android:textColorLink="#FF0000" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_below="@id/btnadd"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft" />
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etxt_weight"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft"
+            android:backgroundTint="#FF0000"
+            android:text="ADD" />
+
+        <EditText
+            android:id="@+id/etxt_name2"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearbtn"
+            android:layout_marginTop="1dp"
+            android:layout_toLeftOf="@id/btnsearch"
+            android:layout_toRightOf="@id/spaceleft"
+            android:layout_weight="1"
+            android:contentDescription="Name"
+            android:ems="10"
+            android:hint="Name..."
+            android:inputType="textPersonName"
+            android:textAllCaps="true"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearbtn"
+            android:layout_toLeftOf="@id/spaceright"
+            android:backgroundTint="#FF0000"
+            android:text="search"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/linearbtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/txtfsearch"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF0000"
+                android:text="Get All" />
+
+            <Button
+                android:id="@+id/btnlast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF0000"
+                android:text="GET LAST" />
+
+            <Button
+                android:id="@+id/btnname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF0000"
+                android:text="GET BY NAME" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/showdb1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/etxt_name2"
+            android:layout_alignParentEnd="false"
+            android:layout_toLeftOf="@id/spaceright"
+            android:layout_toRightOf="@id/spaceleft"
+            android:freezesText="true"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</ScrollView>

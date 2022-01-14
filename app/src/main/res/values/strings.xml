@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BBDD_FRUITS</string>
+    <string-array name="spinner_values">
+        <item>Sweet</item>
+        <item>Salty</item>
+        <item>Sour</item>
+    </string-array>
+</resources>
